@@ -1,4 +1,8 @@
+![WebFlix Logo](/resources/wf_paypal.png)
+
+
 # WebFlix
+
 
 Welcome to WebFlix, a website prototype of a streaming platform developed for a college graded unit project using PHP, MySQL, Bootstrap, and jQuery. This platform streams trailers and mock placeholder videos.
 
@@ -25,7 +29,9 @@ Due to time constraints and building on a messy base where the developer learned
 
 A live demo of the project is available at [Webflix Demo Page] (https://webflix-demo.site)
 
+## License
 
+This project is licensed under the MIT License - see the [LICENCE.md](/LICENCE.md) file for details.
 
 
 # webflix-college-project-git

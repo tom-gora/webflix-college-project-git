@@ -1,0 +1,31 @@
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+# Fiveserver Settings
+fiveserver.config.js
+
+# any encrypted file in my setup
+*.bin
+
+#Error logs I might be getting down from server
+error_log
+*.log
+
+# configurations I might get from server by accident
+# provider
+.well-known/
+.htaccess
+# mine
+config/
+access.php
+konami.php

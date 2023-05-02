@@ -33,5 +33,4 @@ A live demo of the project is available at [Webflix Demo Page] (https://webflix-
 
 This project is licensed under the MIT License - see the [LICENCE.md](/LICENCE.md) file for details.
 
-
-# webflix-college-project-git
+##### Created at Edinburgh College*

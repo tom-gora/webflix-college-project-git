@@ -4,7 +4,7 @@
 # WebFlix
 
 
-Welcome to WebFlix, a website prototype of a streaming platform developed for a college graded unit project using PHP, MySQL, Bootstrap, and jQuery as per gidance and school recommendation. This platform streams trailers and mock placeholder videos.
+Welcome to WebFlix, a website prototype of a streaming platform developed for a college graded unit project using PHP, MySQL, Bootstrap, and jQuery as per guidance and school recommendation. This platform streams trailers and mock placeholder videos.
 
 ## Features
 

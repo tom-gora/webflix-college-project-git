@@ -202,9 +202,6 @@ $(document).ready(function () {
     return allowedKeyCodes.includes(event.keyCode);
   }
 
-  $restrictedFields = $(".restrict-to-nums");
-  $restrictedFields.on("keydown", restrictKeydown);
-
   $("#showAddForm").on("submit", function (e) {
     e.preventDefault();
 
@@ -249,6 +246,8 @@ $(document).ready(function () {
         '<label for="season-' + i + '">Season ' + i + ":</label>"
       );
       $seasonInputs.append($seasonLabel).append($seasonInput);
+      $restrictedFields = $(".restrict-to-nums");
+      $restrictedFields.on("keydown", restrictKeydown);
     }
   }
   addSeasonInputs(1);

@@ -3,7 +3,7 @@ $(document).ready(function () {
   $("#finalSelection").hide();
 
   currentMovie = window.location.search;
-  $("#dateOfBirth").datepicker({
+  $(".dateOfBirth").datepicker({
     clearBtn: false,
     format: "dd/mm/yyyy",
     autoclose: true,

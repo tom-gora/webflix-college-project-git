@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     #On successful update card data iserted into db
     if (empty($errors)) {
-        $id = $_SESSION['user_id'];
+        $id = $_SESSION['user_id'] || mysqli_real_escape_string($link, trim($_POST['id']));
         $q = "UPDATE users SET pass = SHA2('$p',256) WHERE user_id='$id'";
         $stmt = $link->prepare($q);
         $stmt->execute();

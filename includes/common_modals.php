@@ -108,8 +108,8 @@
                               <div class="form-group text-left" style="width: 100%;">
                                 <label for="inputdob">Date of birth</label>
                                 <div class="datepicker date input-group p-0">
-                                  <input type="text" name="dob" placeholder="*"" class=" form-control required-input"
-                                    id="dateOfBirth" value="<?php if (isset($_POST['dob']))
+                                  <input type="text" name="dob" placeholder="*"" class=" dateOfBirth form-control
+                                    required-input" value="<?php if (isset($_POST['dob']))
                                       echo $_POST['dob']; ?>">
                                 </div>
                               </div><!-- End Date Picker Input -->
@@ -201,8 +201,8 @@
       <div class="modal-footer">
         <button type="button" class="btn movieCardButton overlay-play-btn modal-submit"
           onClick="$('#regErrModal').modal('hide');$('#registerModal').modal('show');">Try again</button>
-        <button type="button" class="btn btn-dark btn-lg btn-block modal-submit" data-dismiss="modal" aria-label="Close"
-          style="width: 200px;">Close</button>
+        <button type="button" class="btn movieCardButton overlay-play-btn modal-submit" data-dismiss="modal"
+          aria-label="Close" style="width: 200px;">Close</button>
       </div>
     </div>
   </div>

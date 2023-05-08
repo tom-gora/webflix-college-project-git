@@ -1,0 +1,21 @@
+# Diff Summary
+
+Date : 2023-05-08 15:06:11
+
+Directory /home/tomeczku/repos/webflix-college-project-git
+
+Total : 1 files,  -3 codes, 0 comments, 0 blanks, all -3 lines
+
+[Summary](results.md) / [Details](details.md) / Diff Summary / [Diff Details](diff-details.md)
+
+## Languages
+| language | files | code | comment | blank | total |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| SQL | 1 | -3 | 0 | 0 | -3 |
+
+## Directories
+| path | files | code | comment | blank | total |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| . | 1 | -3 | 0 | 0 | -3 |
+
+[Summary](results.md) / [Details](details.md) / Diff Summary / [Diff Details](diff-details.md)

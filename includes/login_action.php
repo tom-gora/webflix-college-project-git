@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     #connect to db
     require('connect_db.php');
@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['email'] = $data['email'];
         $_SESSION['reg_date'] = $data['reg_date'];
         $_SESSION['status'] = 1;
-        // load ( 'home.php' ) ;
         echo 'true';
     } else {
         $errors = $data;

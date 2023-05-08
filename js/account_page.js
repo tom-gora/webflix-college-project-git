@@ -6,7 +6,7 @@ $(document).ready(function () {
     success: function (response) {
       // get user data as vars
       $user = JSON.parse(response);
-      // console.log($user);
+      console.log($user);
       $user_id = $user.user_id;
       $user_fname = $user.fname;
       $user_lname = $user.lname;

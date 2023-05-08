@@ -156,7 +156,6 @@ $(document).ready(function () {
       $jsonData[this.name] = this.value;
     });
     $jsonString = JSON.stringify($jsonData);
-    // console.log($jsonString);
     $.ajax({
       url: "./admin_scripts/admin_php/admin_add_movie.php",
       type: "POST",

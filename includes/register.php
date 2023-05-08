@@ -37,14 +37,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     #check PW and if matching PW entries
-    if (!empty($_POST['pass1'])) {
-        if ($_POST['pass1'] != $_POST['pass2']) {
-            $errors[] = 'Passwords do not match.';
+    if (!empty($_POST['pass1'])) { // if input not empty
+        if ($_POST['pass1'] != $_POST['pass2']) { // and passwords don't match
+            $errors[] = 'Passwords do not match.'; // push error into array
         } else {
-            $p = mysqli_real_escape_string($link, trim($_POST['pass1']));
+            $p = mysqli_real_escape_string($link, trim($_POST['pass1'])); // else good to write into db
         }
     } else {
-        $errors[] = 'Password was not provided.';
+        $errors[] = 'Password was not provided.'; // else if input IS empty write error into array
     }
 
     #check email

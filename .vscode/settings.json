@@ -1,0 +1,46 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "51.83.236.90",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "graded_unit_db",
+            "database": "pdeugpob_graded_unit_db",
+            "username": "pdeugpob_tomeczku",
+            "password": "schizofrenia86WF",
+            "group": "college"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "51.83.236.90",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "gym_app",
+            "group": "college",
+            "database": "pdeugpob_jorge_gym",
+            "username": "pdeugpob_tomeczkugym",
+            "password": "schizofrenia86GYM"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "localhost",
+            "group": "college",
+            "database": "graded_unit_db",
+            "username": "tomeczku",
+            "password": "homedev2"
+        }
+    ]
+}

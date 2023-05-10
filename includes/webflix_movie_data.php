@@ -55,7 +55,10 @@ while ($row = mysqli_fetch_array($res)) {
     $average = number_format($row['average'], 2);
 }
 
-$q3 = "SELECT r.review_text, r.rating, u.first_name FROM webflix_movies_review_dump r JOIN users u ON r.user_id = u.user_id WHERE r.movie_id = $movie_id";
+$q3 = "SELECT r.review_text, r.rating, COALESCE(u.first_name, 'Deleted User') as first_name 
+FROM webflix_movies_review_dump r 
+LEFT JOIN users u ON r.user_id = u.user_id 
+WHERE r.movie_id = $movie_id";
 $stmt = $link->prepare($q3);
 $stmt->execute();
 $res = $stmt->get_result();
@@ -130,19 +133,22 @@ echo '"></a></div>
         <div class="reviews">
         <h5>Reviews:</h5>
         <div class="overlay-carousel">';
-foreach ($reviews_arr as $review) {
-    echo '<div class="review-slide-wrapper"><p><strong>';
-    echo $review->name;
-    echo '</strong></p>
-            <span class="product-rating">';
-    for ($r = 0; $r < $review->rat; $r++) {
-        echo '<i class="fa fa-star" aria-hidden="true"></i>';
+if (count($reviews_arr) > 0) {
+    foreach ($reviews_arr as $review) {
+        echo '<div class="review-slide-wrapper"><p><strong>';
+        echo $review->name;
+        echo '</strong></p>
+                    <span class="product-rating">';
+        for ($r = 0; $r < $review->rat; $r++) {
+            echo '<i class="fa fa-star" aria-hidden="true"></i>';
+        }
+        echo '</span><br><p>';
+        echo $review->txt;
+        echo '</p></div>';
     }
-    echo '</span><br><p>';
-    echo $review->txt;
-    echo '</p></div>';
+} else {
+    echo '<div class="review-slide-wrapper"><p><strong>No reviews yet...</strong></p></div>';
 }
-
 echo '</div></div><br>
         <a class="btn movieCardButton overlay-review-btn" onClick="$(\'#reviewModal\').modal(\'show\');">LEAVE A REVIEW</a>
         </div></div></section>';

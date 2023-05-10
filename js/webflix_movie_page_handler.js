@@ -36,7 +36,9 @@ $(document).ready(function () {
       $player = $(".vid-section video");
       $placeholder = $(".placeholder-info");
       $rating = $(".text-block .product-rating").attr("value");
-      // $rating = 4.5;
+      if ($rating == "0.00") {
+        $(".product-rating").css("display", "none");
+      }
       $fraction = (5 - $rating) / 5;
       $hideRight = $(".rating-cover");
       $starsWidth = $(".product-rating").width();

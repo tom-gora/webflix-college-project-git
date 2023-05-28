@@ -27,7 +27,7 @@ Due to time constraints and building on a messy base where the developer learned
 
 ## Live Demo
 
-A live demo of the project is available at [Webflix Demo Page] (https://webflix-demo.site)
+A live demo of the project is available at [Webflix Demo Page](https://webflix-demo.site)
 
 ## License
 

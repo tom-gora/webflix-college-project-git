@@ -1,13 +1,13 @@
-$(document).ready(function () {
+$(document).ready(function() {
   $.ajax({
     url: "includes/get_series.php",
     type: "POST",
     dataType: "text",
-    success: function (data) {
+    success: function(data) {
       $.ajax({
         url: "includes/get_tmdb_data.php",
         dataType: "json",
-        success: function (tmdb_data) {
+        success: function(tmdb_data) {
           $tmdbKey = tmdb_data.tmdb_key;
           $tmdbApiMovieUrl = tmdb_data.tmdb_api_movie_url;
           $tmdbApiTvUrl = tmdb_data.tmdb_api_tv_url;
@@ -16,7 +16,7 @@ $(document).ready(function () {
           function getTVPath(title, callback) {
             $.getJSON(
               $tmdbApiTvUrl + $tmdbKey + "a&query=" + title + "&callback=?",
-              function (json) {
+              function(json) {
                 var path = $tmdbImgUrl + json.results[0].poster_path;
                 callback(title, path);
               }
@@ -27,12 +27,12 @@ $(document).ready(function () {
           $json = JSON.parse(data);
           console.log($json);
           for (var $i = 0; $i < $json.length; $i++) {
-            (function () {
+            (function() {
               var $id = $json[$i].id;
               var $title = $json[$i].title;
               var $summary = $json[$i].summary;
               var $show_page = "webflix_show.php?id=" + $id;
-              getTVPath($title, function (title, path) {
+              getTVPath($title, function(title, path) {
                 var $cardHtml =
                   '<div class="col-md-3"><div class="card show-card" style = "width: 16rem !important; overflow: hidden !important;" ><a class="card-link" href="' +
                   $show_page +
@@ -52,7 +52,7 @@ $(document).ready(function () {
             })();
           }
         },
-        error: function (jqXHR, textStatus, errorThrown) {
+        error: function(textStatus, errorThrown) {
           console.log("Error: " + textStatus + " - " + errorThrown);
         },
       });

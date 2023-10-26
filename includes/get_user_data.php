@@ -6,8 +6,8 @@ require('connect_db.php');
 //get my configurations
 $encrypted_data = file_get_contents("/home/my_user/config/encrypted_config.bin");
 $decrypted_data = openssl_decrypt($encrypted_data, "AES-256-CBC", $key, 0, substr($key, 0, 16));
-$config_array = parse_ini_string($decrypted_data);
-extract($config_array);
+$_ENV = parse_ini_string($decrypted_data);
+extract($_ENV);
 
 if (!isset($_SESSION['user_id'])) {
     // back to homepage if no session. page only accessible after login
@@ -17,10 +17,10 @@ if (!isset($_SESSION['user_id'])) {
 
 
     $id = $_SESSION['user_id'];
-    $user_ui_api_url = $config_array['USER_UI_API_URL'];
-    $country_io_url = $config_array['COUNTRYIO_URL'];
-    $oxr_app_id = $config_array['OXR_APP_ID'];
-    $oxr_url = $config_array['OXR_URL'];
+    $user_ui_api_url = $_ENV['USER_UI_API_URL'];
+    $country_io_url = $_ENV['COUNTRYIO_URL'];
+    $oxr_app_id = $_ENV['OXR_APP_ID'];
+    $oxr_url = $_ENV['OXR_URL'];
 
 
 
